@@ -1,5 +1,5 @@
-import tkinter as tk
-from tkinter import filedialog
+#import tkinter as tk
+#from tkinter import filedialog
 import threading
 import mediapipe as mp
 from mediapipe import solutions
@@ -353,7 +353,7 @@ class SquatAnalyser():
                 json.dump(enriched_report, f, indent=2)
 
 
-class SquatAnalyserApp:
+'''class SquatAnalyserApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Squat Analysis")
@@ -379,7 +379,7 @@ class SquatAnalyserApp:
                                                     filetypes=[("MP4 files", "*.mp4")])
             if save_path:
                 analyser = SquatAnalyser(mode=1, file_path=file_path)
-                threading.Thread(target=lambda: analyser.process_frame(save_path=save_path)).start()
+                threading.Thread(target=lambda: analyser.process_frame(save_path=save_path)).start()'''
 
 
 """if __name__ == "__main__":
@@ -391,3 +391,4 @@ if __name__ == "__main__":
     video_path = "IMG_2250.MOV"
     analyser = SquatAnalyser(mode=1, file_path=video_path)
     analyser.process_frame(save_path="processed_video.mp4")
+
